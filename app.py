@@ -9,7 +9,7 @@ app = Flask(__name__)
 @app.route('/', methods=['GET'])
 def home():
     if 'src' not in request.args:
-        return jsonify({'error': "no source image found"})
+        return jsonify({'code': 404, 'error': "no source image found"})
 
     src = request.args['src']
     dominant_color, palette = getColorPalette(src)
