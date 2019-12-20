@@ -6,7 +6,7 @@ from flask import Flask, request, jsonify
 app = Flask(__name__)
 
 
-@app.route('/imgdominantcolor', methods=['GET'])
+@app.route('/', methods=['GET'])
 def imgdominantcolor():
     if 'src' not in request.args:
         return jsonify({'error': "no source image found"})
