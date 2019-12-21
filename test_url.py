@@ -4,7 +4,7 @@ import requests
 def test_code400():
     response = requests.get(url='https://img-dominant-color.herokuapp.com/')
 
-    assert response.json()['status']['code'] == 404
+    assert response.json()['status']['code'] == 400
 
 
 def test_code404():

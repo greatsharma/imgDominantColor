@@ -17,7 +17,7 @@ def home():
     }
 
     if 'src' not in request.args:
-        response['status']['code'] = 404
+        response['status']['code'] = 400
         response['status']['msg'] = "Specify source image"
     else:
         src = request.args['src']
