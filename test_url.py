@@ -1,5 +1,7 @@
 import requests
 
+# TODO: add pytest-flask
+# FIXME: correct tests
 
 def test_code400():
     response = requests.get(url='https://img-dominant-color.herokuapp.com/')
