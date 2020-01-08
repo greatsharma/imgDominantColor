@@ -25,15 +25,12 @@ def getColorPalette(src, k=4, image_processing_size=(25, 25)):
     try:
         hsv_img = cv2.cvtColor(img, cv2.COLOR_BGR2HSV)
 
-        # resize image if new dims provided
         if image_processing_size is not None:
             image = cv2.resize(hsv_img, image_processing_size,
                             interpolation=cv2.INTER_AREA)
 
-        # reshape the image to be a list of pixels
         image = image.reshape((image.shape[0] * image.shape[1], 3))
 
-        # cluster and assign labels to the pixels
         clt = MiniBatchKMeans(n_clusters=k, random_state=42)
         labels = clt.fit_predict(image)
 
