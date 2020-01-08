@@ -1,6 +1,6 @@
 import requests
 
-# TODO: add pytest-flask
+# TODO: as you have noticed these tests are useless for now so I'll add pytest-flask
 # FIXME: correct tests
 
 def test_code400():
